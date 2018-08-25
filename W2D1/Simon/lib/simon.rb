@@ -61,7 +61,7 @@ class Simon
   end
 
   def game_over_message
-    puts "Sorry, you lose"
+    puts "Sorry, you lose. Your score was #{@sequence_length - 1}"
   end
 
   def reset_game
