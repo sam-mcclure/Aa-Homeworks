@@ -33,6 +33,10 @@ body {
   border-right: 1px solid  #ccc;
 }
 
+.header-logo:hover {
+  background-color: black;
+}
+
 .header-list {
   float: right;
 }
@@ -40,6 +44,10 @@ body {
 .header-list > li{
   float: left;
   border-left: 1px solid  #ccc;
+}
+
+.header-list > li:hover {
+  background-color: black;
 }
 
 .cf::after {
