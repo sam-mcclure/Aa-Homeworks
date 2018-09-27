@@ -57,6 +57,19 @@ placeListButton.addEventListener("click", placeListSubmit);
 
   const photoSubmit = (e) => {
     e.preventDefault();
+
+    let photoUrlInput = document.querySelector('.photo-url-input');
+    let photourl = photoUrlInput.value;
+    photoUrlInput.value = '';
+
+    let newImg = document.createElement('img');
+    let newLi = document.createElement('li');
+    newImg.src = photourl;
+    newLi.appendChild(newImg);
+
+    let dogPhotoList = document.querySelector(".dog-photos");
+    dogPhotoList.appendChild(newLi);
+
   };
 
   const photoSubmitButton = document.querySelector('.photo-url-submit');
