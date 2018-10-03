@@ -39,6 +39,71 @@
 * author_id references users
 * index on :author_id
 
+# quoteposts
+| column name    |    data type  |     details |
+| -------------  | ------------- |-------------|
+| id             | integer       | not null, primary key
+| quote          | string        | not null
+| source         | text          | not null
+| author_id      | integer       | not null, indexed, foreign key
+| created_at     | datetime      | not null
+| updated_at     | datetime      | not null
+
+* author_id references users
+* index on :author_id
+
+# linkposts
+| column name    |    data type  |     details |
+| -------------  | ------------- |-------------|
+| id             | integer       | not null, primary key
+| link           | string        | not null
+| body           | text          | not null
+| author_id      | integer       | not null, indexed, foreign key
+| created_at     | datetime      | not null
+| updated_at     | datetime      | not null
+
+* author_id references users
+* index on :author_id
+
+# chatposts
+| column name    |    data type  |     details |
+| -------------  | ------------- |-------------|
+| id             | integer       | not null, primary key
+| title          | string        | not null
+| body           | text          | not null
+| author_id      | integer       | not null, indexed, foreign key
+| created_at     | datetime      | not null
+| updated_at     | datetime      | not null
+
+* author_id references users
+* index on :author_id
+
+# musicposts
+| column name    |    data type  |     details |
+| -------------  | ------------- |-------------|
+| id             | integer       | not null, primary key
+| music_url      | string        | not null
+| body           | text          | not null
+| author_id      | integer       | not null, indexed, foreign key
+| created_at     | datetime      | not null
+| updated_at     | datetime      | not null
+
+* author_id references users
+* index on :author_id
+
+# videoposts
+| column name    |    data type  |     details |
+| -------------  | ------------- |-------------|
+| id             | integer       | not null, primary key
+| video_url      | string        | not null
+| body           | text          | not null
+| author_id      | integer       | not null, indexed, foreign key
+| created_at     | datetime      | not null
+| updated_at     | datetime      | not null
+
+* author_id references users
+* index on :author_id
+
 # likes
 | column name    |    data type  |     details |
 | -------------  | ------------- |-------------|
@@ -48,7 +113,7 @@
 | created_at     | datetime      | not null
 | updated_at     | datetime      | not null
 
-* user_id references users
+* user_id references users 
 * post_id references posts
 * index on [:post_id, :user_id], unique: true
 * index on :user_id, unique: true
